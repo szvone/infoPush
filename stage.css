@@ -1,0 +1,258 @@
+﻿/*全局样式*/
+*{
+	margin: 0;
+	padding: 0;
+	transition: all 0.3s;
+}
+
+body{
+	background: url("bg.png"); 
+	font: 14px "Microsoft YaHei", Helvetica, Arial, Lucida Grande, Tahoma, sans-serif;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+
+
+#main{
+	width: 90%;
+	margin: auto;
+	overflow: hidden;
+}
+
+/*头部*/
+#header{
+	height: 50px;
+	line-height: 50px;
+	padding: 20px;
+	/*border-bottom: 1px solid gray;*/
+}
+#header .logo{
+	float: left;
+	font-size: 32px;
+	font-weight: normal;
+	letter-spacing: 5px;
+}
+#header .nav{
+	float: right;
+}
+#header .nav a{
+	color: #551A8B;
+}
+#header .nav a:hover{
+	color: #CA0000;
+	transition: all 0.3s;
+}
+#header .nav li{
+	float: left;
+	margin-right: 15px;
+}
+
+/*展示*/
+#show{
+	overflow: hidden;
+}
+
+/*左栏*/
+#show .left{
+	float: left;
+	width: 75%;
+	padding-bottom: 30px;
+}
+
+/*右栏*/
+#show .right{
+	float: left;
+	width: 25%;
+}
+
+/*文章*/
+#show .article{
+	margin-top: 20px;
+	background: white;
+	border: 1px solid #EAEAEA;
+	padding: 15px 20px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+#show .article:hover{
+	border: 1px solid #D4D4D4;
+}
+#show .article .title{
+	font-size: 17px;
+	font-weight: 700;
+	display: inline-block;
+}
+#show .article .title a{
+	color: #505050;
+	font-size: 22px;
+	font-weight: normal;
+}
+#show .article .title a:hover{
+	color: #707070;
+	border-bottom: 1px solid;
+}
+#show .article .content{
+	color: gray;
+	padding: 15px 0;
+	/* text-indent: 2em; */
+}
+#show .article .date{
+right: 0px;      bottom: 0px;	color: black;
+	font-size: 10px;
+}
+#show .article .content p{
+	line-height: 30px;
+}
+#show .article .content pre{
+	word-wrap: break-word;
+}
+#show .article .content .lastEdit{
+	text-align: center;
+}
+#show .article .content .lastEdit span{
+	color: #842424;
+	font-size: 10px;
+	border: 1px solid #FCEFBB;
+	padding: 3px 10px;
+	background: #FFFAE1;
+	border-radius: 0px;
+	cursor: pointer;
+}
+
+/*嵌入层*/
+#show .embed{
+	margin-top: 20px;
+	background: white;
+	border: 1px solid #EAEAEA;
+	padding: 15px 20px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*栏目*/
+#show .right .sidebar{
+	margin: 20px;
+	border: 1px solid #EAEAEA;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-clip: padding-box;
+	background: white;
+	border-radius: 10px;
+}
+#show .right .sidebar:hover{
+	border: 1px solid #45B6F7;
+}
+#show .sidebar .title{
+	color: white;
+	font-size: 14px;
+	display: inline-block;
+	padding: 3px 12px;
+	background: #45B6F7;
+}
+
+
+
+#show .sidebar .content{
+	color: black;
+	font-size: 15px;
+}
+#show .sidebar .content p{
+	padding: 10px;
+}
+#show .sidebar .content a{
+	display: inline-block;
+	margin: 15px;
+}
+#show .sidebar .content .ds-meta{
+	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	color: #4C4C4C;
+	font-weight: bold;
+}
+#show .sidebar .content .ds-meta a{
+	margin: 0;
+}
+
+/*底部*/
+#footer{
+	display: none;
+	margin: 0px 40px;
+	padding: 30px;
+}
+#footer div{
+	text-align: center;
+	padding-top: 10px;
+	/*border-top: 1px solid gray;*/
+}
+
+/*响应式布局*/
+@media screen and (max-width: 740px){
+	#header .nav{
+		display: none;
+	}
+	
+	#main #show .right{
+		display: none;
+	}
+	#main #show .left{
+		width: 99%;
+	}
+	#main #header .logo{
+		width: 100%;
+		text-align: center;
+	}
+	#footer{
+		margin: 0;
+	}
+	#header .logo{
+		letter-spacing: 15px;
+	}
+}
+
+/*分页条样式*/
+.md-page{
+	padding: 20px 0;
+	text-align: center;
+}
+.md-page a{
+	margin: 0 5px;
+	padding: 2px 7px;
+	border: 1px solid #ccc;
+	background: #f3f3f3;
+	text-decoration: none;
+	color: #428bca;
+}
+.md-page span{
+	margin: 0 5px;
+	padding: 2px 7px;
+	border: 1px solid #ccc;
+	background: #f3f3f3;
+	text-decoration: none;
+	color: #428bca;
+}
+.md-page input{
+	margin: 0 5px;
+	padding: 2px 7px;
+	border: 1px solid #ccc;
+	background: #f3f3f3;
+	text-decoration: none;
+	color: #428bca;
+}
+.md-page a:hover{
+	background: #e4e4e4;
+	border: 1px solid #908f8f;
+}
+.md-page .current{
+	margin: 0 5px;
+	padding: 2px 7px;
+	background: #f60;
+	border: 1px solid #fe8101;
+	color: #fff;
+}
